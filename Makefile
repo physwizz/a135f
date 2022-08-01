@@ -405,7 +405,9 @@ OBJSIZE		= llvm-size
 STRIP		= llvm-strip
 else
 #CC		= $(srctree)/toolchain/clang/host/linux-x86/clang-r383902/bin/clang
-CC    = ../PLATFORM/prebuilts/clang/host/linux-x86/clang-r383902/bin/clang
+# CC    = ../PLATFORM/prebuilts/clang/host/linux-x86/clang-r383902/bin/clang
+CC=/home/grahame/toolchains/android_prebuilts_clang_host_linux-x86_clang-5484270-9.0/bin/clang
+
 LD		= $(CROSS_COMPILE)ld
 AR		= $(CROSS_COMPILE)ar
 NM		= $(CROSS_COMPILE)nm
