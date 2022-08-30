@@ -3326,19 +3326,19 @@
 				phandle = <0x2e>;
 
 				panel_power_enable {
-					type = "regulator,enable\0lcd_vddi\0delay,usleep\02000";
+					type = [72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 76 64 64 69 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00];
 				};
 
 				panel_power_enable_2 {
-					type = "regulator,enable\0lcd_vsp\0delay,usleep\02000\0regulator,enable\0lcd_vsn\0delay,usleep\02000";
+					type = [72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 76 73 70 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 76 73 6e 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00];
 				};
 
 				panel_power_disable {
-					type = "delay,usleep\02000\0regulator,disable\0lcd_vsn\0delay,usleep\01000\0regulator,disable\0lcd_vsp\0delay,usleep\01000\0regulator,disable\0lcd_vddi\0delay,msleep\015";
+					type = [64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 73 6e 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 73 70 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 64 64 69 00 64 65 6c 61 79 2c 6d 73 6c 65 65 70 0d 00];
 				};
 
 				panel_reset {
-					type = "delay,usleep\02000\0regulator,enable\0lcd_rst\0delay,usleep\02000\0regulator,disable\0lcd_rst\0delay,usleep\02000\0regulator,enable\0lcd_rst\0delay,msleep\055";
+					type = [64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 6d 73 6c 65 65 70 2d 00];
 				};
 
 				panel_reset_disable {
@@ -3381,23 +3381,23 @@
 				phandle = <0x2f>;
 
 				panel_power_enable {
-					type = "regulator,enable\0lcd_vddi\0delay,usleep\02000";
+					type = [72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 76 64 64 69 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00];
 				};
 
 				panel_power_enable_2 {
-					type = "regulator,enable\0lcd_vsp\0delay,usleep\01000\0regulator,enable\0lcd_vsn\0delay,msleep\010";
+					type = "regulator,enable\0lcd_vsp\0delay,usleep\b00\0regulator,enable\0lcd_vsn\0delay,msleep\b";
 				};
 
 				panel_power_disable {
-					type = "delay,usleep\01000\0regulator,disable\0lcd_vsn\0delay,usleep\01000\0regulator,disable\0lcd_vsp\0delay,usleep\01000\0regulator,disable\0lcd_vddi\0delay,msleep\035";
+					type = [64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 73 6e 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 73 70 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 64 64 69 00 64 65 6c 61 79 2c 6d 73 6c 65 65 70 1d 00];
 				};
 
 				panel_reset {
-					type = "delay,usleep\01000\0regulator,enable\0lcd_rst\0delay,usleep\01000\0regulator,disable\0lcd_rst\0delay,usleep\03000\0regulator,enable\0lcd_rst\0delay,msleep\010";
+					type = [64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 18 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 6d 73 6c 65 65 70 08 00];
 				};
 
 				panel_reset_disable {
-					type = "delay,msleep\070\0regulator,disable\0lcd_rst";
+					type = "delay,msleep8\0regulator,disable\0lcd_rst";
 				};
 			};
 
@@ -3436,23 +3436,23 @@
 				phandle = <0x30>;
 
 				panel_power_enable {
-					type = "regulator,enable\0lcd_vddi\0delay,usleep\02000";
+					type = [72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 76 64 64 69 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00];
 				};
 
 				panel_power_enable_2 {
-					type = "regulator,enable\0lcd_vsp\0delay,usleep\02000\0regulator,enable\0lcd_vsn\0delay,msleep\010";
+					type = <0x72656775 0x6c61746f 0x722c656e 0x61626c65 0x6c6364 0x5f767370 0x64656c 0x61792c75 0x736c6565 0x70103030 0x726567 0x756c6174 0x6f722c65 0x6e61626c 0x65006c63 0x645f7673 0x6e006465 0x6c61792c 0x6d736c65 0x65700800>;
 				};
 
 				panel_power_disable {
-					type = "delay,usleep\01000\0regulator,disable\0lcd_vsn\0delay,usleep\02000\0regulator,disable\0lcd_vsp\0delay,usleep\02000\0regulator,disable\0lcd_vddi\0delay,msleep\035";
+					type = [64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 73 6e 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 73 70 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 64 64 69 00 64 65 6c 61 79 2c 6d 73 6c 65 65 70 1d 00];
 				};
 
 				panel_reset {
-					type = "delay,usleep\01000\0regulator,enable\0lcd_rst\0delay,usleep\02000\0regulator,disable\0lcd_rst\0delay,usleep\02000\0regulator,enable\0lcd_rst\0delay,msleep\010";
+					type = [64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 6d 73 6c 65 65 70 08 00];
 				};
 
 				panel_reset_disable {
-					type = "delay,msleep\070\0regulator,disable\0lcd_rst";
+					type = "delay,msleep8\0regulator,disable\0lcd_rst";
 				};
 			};
 
@@ -3491,23 +3491,23 @@
 				phandle = <0x31>;
 
 				panel_power_enable {
-					type = "regulator,enable\0lcd_vddi\0delay,usleep\02000";
+					type = [72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 76 64 64 69 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00];
 				};
 
 				panel_power_enable_2 {
-					type = "regulator,enable\0tsp_rst\0delay,usleep\02000\0regulator,enable\0lcd_vsp\0delay,usleep\01000\0regulator,enable\0lcd_vsn\0delay,usleep\02000";
+					type = [72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 74 73 70 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 76 73 70 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 76 73 6e 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00];
 				};
 
 				panel_power_disable {
-					type = "delay,usleep\02000\0regulator,disable\0lcd_vsn\0delay,usleep\01000\0regulator,disable\0lcd_vsp\0delay,usleep\01000\0regulator,disable\0tsp_rst\0delay,usleep\01000\0regulator,disable\0lcd_vddi\0delay,usleep\01000";
+					type = [64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 73 6e 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 73 70 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 74 73 70 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 76 64 64 69 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 08 30 30 00];
 				};
 
 				panel_reset {
-					type = "delay,usleep\02000\0regulator,enable\0lcd_rst\0delay,usleep\02000\0regulator,disable\0lcd_rst\0delay,usleep\02000\0regulator,enable\0lcd_rst\0delay,msleep\022";
+					type = [64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 64 69 73 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 75 73 6c 65 65 70 10 30 30 00 72 65 67 75 6c 61 74 6f 72 2c 65 6e 61 62 6c 65 00 6c 63 64 5f 72 73 74 00 64 65 6c 61 79 2c 6d 73 6c 65 65 70 12 00];
 				};
 
 				panel_reset_disable {
-					type = "delay,msleep\070\0regulator,disable\0lcd_rst\0delay,usleep\01000";
+					type = "delay,msleep8\0regulator,disable\0lcd_rst\0delay,usleep\b00";
 				};
 			};
 
