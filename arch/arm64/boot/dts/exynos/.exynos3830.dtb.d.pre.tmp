@@ -1,0 +1,2 @@
+arch/arm64/boot/dts/exynos/.exynos3830.dtb.dts.tmp: \
+  arch/arm64/boot/dts/exynos/exynos3830.dts
