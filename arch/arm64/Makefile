@@ -129,6 +129,8 @@ boot		:= arch/arm64/boot
 KBUILD_IMAGE	:= $(boot)/Image.gz
 KBUILD_DTBS	:= dtbs
 
+KBUILD_DTBO_EXYNOS_IMG := dtbo_exynos.img
+
 all:	Image.gz $(KBUILD_DTBS)
 
 Image: vmlinux
@@ -153,6 +155,11 @@ dtbs: prepare scripts
 
 dtbs_install:
 	$(Q)$(MAKE) $(dtbinst)=$(boot)/dts
+
+$(KBUILD_DTBO_EXYNOS_IMG): dtbs
+	$(Q)$(MAKE) $(build)=$(boot) $(boot)/$@
+
+all: $(KBUILD_DTBO_EXYNOS_IMG)
 
 PHONY += vdso_install
 vdso_install:
