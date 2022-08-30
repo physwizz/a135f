@@ -116,3 +116,4 @@ obj-$(CONFIG_TOUCHSCREEN_MELFAS_MSS100) += melfas_mss100/
 obj-$(CONFIG_TOUCHSCREEN_HIMAX_I2C_ONLY) += himax/himax_83xxx_i2c/
 obj-$(CONFIG_TOUCHSCREEN_HIMAX_SPI) += himax/himax_831xx/
 obj-$(CONFIG_TOUCHSCREEN_HIMAX_I2C) += himax/himax_831xx/
+obj-$(CONFIG_TOUCHSCREEN_COMMON)	+= tp_common.o
