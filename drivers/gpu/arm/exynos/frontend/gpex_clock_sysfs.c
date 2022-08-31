@@ -157,7 +157,7 @@ GPEX_STATIC ssize_t set_max_lock_dvfs(const char *buf, size_t count)
 		}
 
 		if (clock < SUSTAINABLE_FREQ)
-			clock = SUSTAINABLE_FREQ;
+		    clock = SUSTAINABLE_FREQ;
 		
 		clk_info->user_max_lock_input = clock;
 
