@@ -26,9 +26,8 @@ DTB_LIST := $(dtb-y) $(dtbo-y)
 endif
 DTB_OBJS := $(addprefix $(obj)/dts/,$(DTB_LIST))
 
-DTBO_OBJS_EXYNOS := $(shell find $(obj)/dts/samsung -name \*.dtbo)
-DTB_OBJS_EXYNOS := $(shell find $(obj)/dts/exynos -name \*.dtb)
-
+DTBO_OBJS_EXYNOS := $(shell find $(obj)/dts/samsung/a13/ -name \*.dtbo)
+DTB_OBJS_EXYNOS := $(shell find $(obj)/dts/exynos/ -name \*.dtb)
 
 $(obj)/Image: vmlinux FORCE
 	$(call if_changed,objcopy)
