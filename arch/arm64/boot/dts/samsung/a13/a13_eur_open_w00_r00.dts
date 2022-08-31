@@ -1046,6 +1046,7 @@
 				novatek,enable_settings_aot;
 				novatek,support_ear_detect_mode;
 				novatek,prox_lp_scan_enabled;
+				novatek,enable_sysinput_enabled;
 				novatek,lcdid1-gpio = <0xffffffff 0x07 0x00>;
 				novatek,lcdid2-gpio = <0xffffffff 0x00 0x00>;
 				novatek,lcdid3-gpio = <0xffffffff 0x02 0x00>;
@@ -1308,6 +1309,7 @@
 				ovt,enable_settings_aot;
 				ovt,support_ear_detect_mode;
 				ovt,prox_lp_scan_enabled;
+				ovt,enable_sysinput_enabled;
 				ovt,lcdid = <0x01>;
 				ovt,lcdtype = <0x00 0x4b6220>;
 				ovt,fw_name = "\0tsp_ovt/td4375_a13_boe.bin";
