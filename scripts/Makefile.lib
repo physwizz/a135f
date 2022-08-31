@@ -333,7 +333,7 @@ dtb_dir = arch/arm64/boot/dts/exynos
 quiet_cmd_mkdtbimg = DTBIMG $@
 cmd_mkdtbimg = $(PYTHON) $(srctree)/scripts/mkdtboimg.py cfg_create $@ \
 		$(srctree)/$(dtb_dir)/dtb_exynos.cfg \
-		--dtb-dir $(objtree)/$(dtb_dir
+		--dtb-dir $(objtree)/$(dtb_dir)
 		
 # Bzip2
 # ---------------------------------------------------------------------------
