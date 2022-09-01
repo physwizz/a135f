@@ -327,7 +327,7 @@ ARCH            ?= arm64
 
 # CROSS_COMPILE   ?= $(srctree)/toolchain/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
-CROSS_COMPILE=/home/grahame/toolchains/Topser2/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+CROSS_COMPILE=/home/rog/toolchains/gcc/bin/aarch64-linux-android-
 
 
 
@@ -388,7 +388,7 @@ AS		= $(CROSS_COMPILE)as
 LD		= $(CROSS_COMPILE)ld
 # CC		= $(srctree)/toolchain/clang/host/linux-x86/clang-r353983c/bin/clang
 
-CC=/home/grahame/toolchains/android_prebuilts_clang_host_linux-x86_clang-5484270-9.0/bin/clang
+CC=/home/rog/toolchains/clang/bin/clang
 
 
 
@@ -406,7 +406,7 @@ STRIP		= llvm-strip
 else
 #CC		= $(srctree)/toolchain/clang/host/linux-x86/clang-r383902/bin/clang
 # CC    = ../PLATFORM/prebuilts/clang/host/linux-x86/clang-r383902/bin/clang
-CC=/home/grahame/toolchains/android_prebuilts_clang_host_linux-x86_clang-5484270-9.0/bin/clang
+CC=/home/rog/toolchains/clang/bin/clang
 
 LD		= $(CROSS_COMPILE)ld
 AR		= $(CROSS_COMPILE)ar
@@ -535,7 +535,7 @@ ifneq ($(CROSS_COMPILE),)
 
 # CLANG_TRIPLE	?= $(srctree)/toolchain/clang/host/linux-x86/clang-r353983c/bin/aarch64-linux-gnu-
 
-CLANG_TRIPLE=/home/grahame/toolchains/proton-clang-13-clang/bin/aarch64-linux-gnu
+CLANG_TRIPLE=/home/rog/toolchains/gcc-linaro/bin/aarch64-linux-gnu
 
 CLANG_FLAGS	+= --target=$(notdir $(CLANG_TRIPLE:%-=%))
 ifeq ($(shell $(srctree)/scripts/clang-android.sh $(CC) $(CLANG_FLAGS)), y)
@@ -714,6 +714,17 @@ include/config/auto.conf:
 
 endif # may-sync-config
 endif # $(dot-config)
+
+ifdef CONFIG_LLVM_POLLY
+KBUILD_CFLAGS	+= -mllvm -polly \
+		   -mllvm -polly-run-dce \
+		   -mllvm -polly-run-inliner \
+		   -mllvm -polly-opt-fusion=max \
+		   -mllvm -polly-ast-use-context \
+		   -mllvm -polly-detect-keep-going \
+		   -mllvm -polly-vectorizer=stripmine \
+		   -mllvm -polly-invariant-load-hoisting
+endif
 
 KBUILD_CFLAGS	+= $(call cc-option,-fno-delete-null-pointer-checks,)
 KBUILD_CFLAGS	+= $(call cc-disable-warning,frame-address,)
